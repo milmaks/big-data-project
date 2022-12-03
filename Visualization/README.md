@@ -1,6 +1,6 @@
 # Vizuelizacija korišćenjem echarts
 
-Sadrži html, css i js kod za kreiranje vizuelizacije rezultata obrade podataka. U okviru foldera Results_for_display se nalaze primeri, 2 .csv fajla koji se mogu predstaviti na grafu. 
+Sadrži html, css i js kod za kreiranje vizuelizacije rezultata obrade podataka. U okviru foldera [Results_for_display](/Results_for_display/) se nalaze primeri, 2 .csv fajla koji se mogu predstaviti na grafu. 
 
 Neophodno je podesiti opseg datuma u kojem se želi napraviti prikaz i zatim je neophodno samo učitati željeni fajl.
 

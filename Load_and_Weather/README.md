@@ -1,6 +1,6 @@
 # ECL - struktura projekta
 
-Fajlovi u okviru [root](/README.md) foldera:
+Fajlovi u okviru [root](/) foldera:
 
 **Constants.ecl**
 
