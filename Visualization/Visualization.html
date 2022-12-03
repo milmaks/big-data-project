@@ -1,0 +1,66 @@
+<!--
+	THIS EXAMPLE WAS DOWNLOADED FROM https://echarts.apache.org/examples/en/editor.html?c=multiple-y-axis&lang=ts
+-->
+<!DOCTYPE html>
+<html lang="en" style="height: 100%">
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="styles.css">
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@5.4.0/dist/echarts.min.js"></script>
+  <script src="https://d3js.org/d3.v4.min.js"></script>
+</head>
+<body style="height: 100%; margin: 0">
+  <div id="container"  style="height: 100%; display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 100vh;">
+
+    <table>
+      <tr>
+        <td>
+          <label for="from">Choose date to plot from:&nbsp;</label>
+          <input type="date" id="from" value="2016-01-01" placeholder="From" min="2016-01-01" max="2019-12-24"/>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label for="to">Choose date to plot to:&nbsp;</label>
+          <input type="date" id="to" value="2016-01-07" placeholder="To" min="2016-01-07" max="2019-12-31"/>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label for="file" style="margin-left: 5%;">Choose csv file to visualize:&nbsp;</label>
+          <input type="file" style="margin-left: 45%;" id="file" name="file" class="custom-file-input" accept=".csv"/>
+        </td>
+      </tr>
+    </table>
+    
+    <script>
+        //Retrieve the first (and only!) File from the FileList object
+        function readSingleFile(event) {
+          if(document.getElementById('from').value > document.getElementById("to").value){
+            alert("Wrong date choosen, date to plot from must be before date to plot to!");
+            return;
+          }
+
+          var f = event.target.files[0];
+          const reader = new FileReader();
+
+          reader.onload = function (e) {
+              const text = e.target.result;
+              csvToArray(text, document.getElementById("from").value, document.getElementById("to").value);
+          };
+
+          reader.readAsText(f);
+        }
+        document.getElementById('file').addEventListener('change', readSingleFile, false);
+    </script>
+    
+  </div>
+  <script type="text/javascript" src="./index.js">
+
+  </script>
+</body>
+</html>

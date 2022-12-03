@@ -1,0 +1,5 @@
+{
+    "ecl.launchConfiguration": "VM",
+    "ecl.targetCluster": {},
+    "ecl.eclccPath": "C:\\Program Files\\HPCCSystems\\8.6.60\\clienttools\\bin\\eclcc.exe"
+}
